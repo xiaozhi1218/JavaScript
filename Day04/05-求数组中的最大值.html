@@ -15,11 +15,19 @@
         // 最后输出这个 max
         var arr = [2, 6, 1, 77, 52, 25, 7, 99];
         var max = arr[0];
+        var min = arr[0];
         for (var i = 1; i < arr.length; i++) {
             if (arr[i] > max) {
                 max = arr[i];
             }
         }
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            if (element < min) {
+                min = element;
+            }
+        }
+        console.log('该数据里面的最小值是：' + min);
         console.log('该数组里面的最大值是：' + max);
     </script>
 </head>
