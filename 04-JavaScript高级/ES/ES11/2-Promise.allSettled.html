@@ -24,9 +24,18 @@
         //调用 allsettled 方法
         // const result = Promise.allSettled([p1, p2]);
         
-        // const res = Promise.all([p1, p2]);
-
-        console.log(res);
+        const res = Promise.all([p1, p2]);
+        // res.forEach(res => {
+        //     console.log(res);
+        // });
+        res.then((val) => {
+            val.forEach(item => {
+                console.log(item)
+            })
+        }).catch((err) => {
+            console.log(err)
+        });
+        // console.log(res);
 
     </script>
 </body>
